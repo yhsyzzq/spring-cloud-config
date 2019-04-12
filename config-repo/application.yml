@@ -11,5 +11,11 @@ spring:
   profiles: test #测试环境
   application:
     name: springcloud-study-config-test
+---
+spring:
+  profiles: local #集成环境
+  application:
+    name: springcloud-study-config-local
+
 
 #请保存为UTF-8格式
