@@ -1,11 +1,15 @@
+spring:
+  profiles:
+    active: test
+---
 server:
   port: 8202
-
+---
 spring:
   profiles: test #测试环境
   application:
     name: springcloud-study-config-client
-
+---
 eureka:
   client:
     service-url:
