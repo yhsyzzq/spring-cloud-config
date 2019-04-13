@@ -3,16 +3,29 @@ spring:
     active: test
 ---
 server:
-  port: 8202
----
+  port: 8201
+
 spring:
-  profiles: test #测试环境
+  profiles: dev #开发环境
   application:
-    name: springcloud-study-config-client
----
+    name: springcloud-study-config-client-dev
+
 eureka:
   client:
     service-url:
       defaultZone: eureka7001.com:7001/eureka
+---
+server:
+  port: 8202
+
+spring:
+  profiles: test #测试环境
+  application:
+    name: springcloud-study-config-client-test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: eureka7001.com:7002/eureka
 
 #请保存为UTF-8格式
